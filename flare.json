@@ -1,0 +1,85 @@
+{
+ 	"name": "html",
+ 	"children": [
+  	
+    {
+        "name": "header.php"   
+    },
+    {
+        "name": "index.php"   
+    },
+    {
+        "name": "footer.php"   
+    },
+    {
+        
+        "name": "images",
+        "children": [
+        {
+            "name": "auto",
+            "children": [
+            {
+                "name": "bb",
+                "children": [
+                {
+                    "name":"index"
+                }
+                ]
+            },
+            {
+                "name": "bb",
+                "children": [
+                {
+                    "name":"awnha"
+                }
+                ]
+            }
+            ]
+        }
+        ]
+    },
+    {
+        "name": "apps",
+        "children": [
+            {
+                "name": "Automakers",
+                "children": [
+                    {
+                        "name": "ford"
+                    },
+                    {
+                        "name": "honda"
+                    }
+                ]
+            },
+            {
+                "name": "BLS"
+            },
+            {
+                "name": "Herd the Sheep"
+            },
+            {
+                "name": "KJ"
+            },
+            {
+                "name": "MGS"
+            },
+            {
+                "name": "isitabanger"
+            },
+            {
+                "name": "musicroamer"
+            }
+        ]
+    },
+    {
+        "name": "favicon.ico"
+    },
+    {
+        "name": "robots.txt"
+    },
+    {
+        "name": ".htaccess"
+    }
+  	]
+}

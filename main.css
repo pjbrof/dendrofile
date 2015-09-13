@@ -1,0 +1,17 @@
+/* Use font awesome for the nodes. Directories will be the file folders, images can be the icon, etc... */
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
