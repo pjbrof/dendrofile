@@ -28,14 +28,6 @@ window.onload = function(){
 	      toggle(d);
 	    }
 	  }
-
-	  // Initialize the display to show a few nodes.
-	  // root.children.forEach(toggleAll);
-	  // toggle(root.children[1]);
-	  // toggle(root.children[1].children[2]);
-	  // toggle(root.children[9]);
-	  // toggle(root.children[9].children[0]);
-
 	  update(root);
 	});
 

@@ -1,0 +1,26 @@
+{
+  "name": "dendrofile",
+  "version": "0.1.0",
+  "description": "dendrogram for a file system",
+  "main": "script.js",
+  "scripts": {
+    "getfilecontent": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjbrof/DendroFile.git"
+  },
+  "keywords": [
+    "dendrogram",
+    "d3",
+    "file",
+    "folder"
+  ],
+  "author": "Patrick Brophy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pjbrof/DendroFile/issues"
+  },
+  "homepage": "https://github.com/pjbrof/DendroFile#readme"
+}
