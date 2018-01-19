@@ -6,15 +6,11 @@ const fs = require('fs');
 
 var fileContents = {
   "name": "",
-  "children": [
-    {
-      
-    }
-  ]
+  "children": []
 };
 
 fs.readdirSync(testFolder).forEach(file => {
-  fileContents.push(file);
+  fileContents.children.push(file);
 })
 
 console.log(fileContents);
