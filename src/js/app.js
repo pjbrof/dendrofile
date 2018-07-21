@@ -1,5 +1,5 @@
 window.onload = function(){
-	var m = [20, 120, 20, 20],
+	var m = [20, 120, 20, 120],
 	    w = 1280 - m[1] - m[3],
 	    h = 800 - m[0] - m[2],
 	    i = 0,
@@ -17,8 +17,9 @@ window.onload = function(){
 	  .append("svg:g")
 	    .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
-	d3.json("data.json", function(json) {
+	d3.json("sources/data.json", function(json) {
 	  root = json;
+		console.log(root);
 	  root.x0 = h / 2;
 	  root.y0 = 0;
 

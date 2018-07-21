@@ -4,8 +4,9 @@
   "description": "dendrogram for a file system",
   "main": "script.js",
   "scripts": {
-    "getfilecontent": "node script.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "getfiles": "node getfiles.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run getfiles && node server.js"
   },
   "repository": {
     "type": "git",
