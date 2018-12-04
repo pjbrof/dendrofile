@@ -3,45 +3,45 @@ It will also get details of if the it is a file or directory as well as the file
 
 const testFolder = './';
 const fs = require('fs');
+const path = require('path');
 
-var fileContents = {
-  "name": "files",
-  "children": []
-};
-
-fs.readdirSync(testFolder).forEach(file => {
-  fileContents.children.push({
-    "name": file
-  });
-});
-
-/*var path = require('path');
-var walk = function(dir, done) {
-  var results = [];
-  fs.readdir(dir, function(err, list) {
-    if (err) return done(err);
-    var pending = list.length;
-    if (!pending) return done(null, results);
-    list.forEach(function(file) {
-      file = path.resolve(dir, file);
-      fs.stat(file, function(err, stat) {
-        if (stat && stat.isDirectory()) {
-          walk(file, function(err, res) {
-            results = results.concat(res);
-            if (!--pending) done(null, results);
+const getFiles = (workingDir) => {
+  return new Promise((resolve, reject) => {
+    const walk = (dir, done) => {
+      var results = [];
+      fs.readdir(dir, function(err, list) {
+        if (err) return done(err);
+        var pending = list.length;
+        if (!pending) return done(null, results);
+        list.forEach(function(file) {
+          file = path.resolve(dir, file);
+          fs.stat(file, function(err, stat) {
+            if (stat && stat.isDirectory()) {
+              walk(file, function(err, res) {
+                results = results.concat(res);
+                if (!--pending) done(null, results);
+              });
+            } else {
+              results.push(file);
+              if (!--pending) done(null, results);
+            }
           });
-        } else {
-          results.push(file);
-          if (!--pending) done(null, results);
-        }
+        });
       });
+      resolve(results);
+    };
+  });
+}
+
+
+// Write to JSON file
+getFiles(testFolder)
+  .then((results) => {
+    console.log(results);
+    fs.writeFile("src/sources/data.json", JSON.stringify(results), function(err) {
+      if(err) {
+        return console.log(err);
+      }
+      console.log("The file was saved to disc");
     });
   });
-};*/
-
-fs.writeFile("src/sources/data.json", JSON.stringify(fileContents), function(err) {
-  if(err) {
-    return console.log(err);
-  }
-  console.log("The file was saved!");
-});

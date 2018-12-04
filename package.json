@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/pjbrof/DendroFile/issues"
   },
-  "homepage": "https://github.com/pjbrof/DendroFile#readme"
+  "homepage": "https://github.com/pjbrof/DendroFile#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
